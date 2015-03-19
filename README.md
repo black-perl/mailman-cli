@@ -17,7 +17,7 @@ Quick start
         
 Main Dependencies
 -------------
-- `Bluebird` - Prmoise library for js.
+- `Bluebird` - Promise library for js.
 - `Superagent` - Super easy request making js library.
 
 Syntax styling
