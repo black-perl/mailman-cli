@@ -42,7 +42,7 @@ Methods supported
 
 
 ####Listing lists
-- `Callbacks`
+- *Callbacks*
 
         > cli.lists().auth().get(function(err,data){
              if (err) {
@@ -53,14 +53,14 @@ Methods supported
              }
             });
             
-- `Promises`
+- *Promises*
 
         > cli.lists().auth().get().then(function(data){
             console.log(data);
             });
 
 ####Listing owners of a list
-- `Callbacks`
+- *Callbacks*
 
         > cli.lists().auth().listId(<list-id>).owner().get(function(err,data){
              if (err) {
@@ -71,7 +71,8 @@ Methods supported
              }
             });
             
-- `Promises`
+- *Promises*
+
         > cli.lists().auth().listId(<list-id>).owner().get().then(function(data){
             console.log(data);
             });
