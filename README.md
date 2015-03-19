@@ -20,7 +20,10 @@ Main Dependencies
 - `Bluebird` - Prmoise library for js.
 - `Superagent` - Super easy request making js library.
 
-It offers `chaining`, `promises` and of course the `callback` style syntax.
+Syntax styling
+--------------
+
+It offers `chaining`, `promises` and of course the `callbacks` style syntax.
 
 Methods supported
 -----------------
@@ -40,6 +43,7 @@ Methods supported
 
 ####Listing lists
 - `Callbacks`
+
         > cli.lists().auth().get(function(err,data){
              if (err) {
                 // handle error
@@ -48,13 +52,16 @@ Methods supported
                 console.log(data);
              }
             });
+            
 - `Promises`
+
         > cli.lists().auth().get().then(function(data){
             console.log(data);
             });
 
 ####Listing owners of a list
 - `Callbacks`
+
         > cli.lists().auth().listId(<list-id>).owner().get(function(err,data){
              if (err) {
                 // handle error
@@ -63,10 +70,12 @@ Methods supported
                 console.log(data);
              }
             });
+            
 - `Promises`
         > cli.lists().auth().listId(<list-id>).owner().get().then(function(data){
             console.log(data);
             });
+
 
 Core Classes
 ------------
