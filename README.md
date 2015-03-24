@@ -17,10 +17,13 @@ Quick start
         
 Main Dependencies
 -------------
-- ####Bluebird - Prmoise library for js.
-- ####Superagent - Super easy request making library.
+- `Bluebird` - Promise library for js.
+- `Superagent` - Super easy request making js library.
 
-It offers `chaining`, `promises` and of course the `callback` style syntax.
+Syntax styling
+--------------
+
+It offers `chaining`, `promises` and of course the `callbacks` style syntax.
 
 Methods supported
 -----------------
@@ -39,7 +42,8 @@ Methods supported
 
 
 ####Listing lists
-- `Callbacks`
+- *Callbacks*
+
         > cli.lists().auth().get(function(err,data){
              if (err) {
                 // handle error
@@ -48,13 +52,16 @@ Methods supported
                 console.log(data);
              }
             });
-- `Promises`
+            
+- *Promises*
+
         > cli.lists().auth().get().then(function(data){
             console.log(data);
             });
 
 ####Listing owners of a list
-- `Callbacks`
+- *Callbacks*
+
         > cli.lists().auth().listId(<list-id>).owner().get(function(err,data){
              if (err) {
                 // handle error
@@ -63,10 +70,13 @@ Methods supported
                 console.log(data);
              }
             });
-- `Promises`
+            
+- *Promises*
+
         > cli.lists().auth().listId(<list-id>).owner().get().then(function(data){
             console.log(data);
             });
+
 
 Core Classes
 ------------
@@ -78,7 +88,7 @@ Core Classes
 PS
 --
 If you try to read the code,  you may find some unnecessary things as this is aimed towards something big :smiley:
-And, sorry for not `mplementing a testing framework, I had spent most of my time while figuring out different things for the styling and structure of the API.
+And, sorry for not implementing a testing framework, I had spent most of my time while figuring out different things for the styling and structure of the API.
 
 
 
