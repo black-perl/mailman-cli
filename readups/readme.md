@@ -57,4 +57,4 @@ The current implementation does not support the chaining style syntax but this c
 
 So, the aim is to register  **user implemented filter functions** and use them while keeping the syntax.
 
-**Note** : Actually the loops are blocking in `Node` but the ;ist items are less here, so I have written blocking code in `utils.js`. Sorry :fearful: , next time will use `process`.
+**Note** : Actually the loops are blocking in `Node.js` but the number of list items is assumed to be less here, so I have written blocking code in `utils.js`. Sorry :fearful: , next time I will go for `process`. :wink: 
