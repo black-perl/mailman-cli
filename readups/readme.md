@@ -8,6 +8,7 @@ There can be situations where we require filteration of data according to a rule
 Since there is no such filteration implemented on the server side, because it's upto user what he wants and the server can't take all things into account.        
 So, there should be a support for adding client-side filters in **mailman-cli** to make it more customisable keeping the chaining syntax.
 Eg.
+    
     > client.lists().maxMembers().get(callback);
 
 The desired functionality should achieve this :
