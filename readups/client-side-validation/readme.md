@@ -21,7 +21,7 @@ I have implemented **client-side validation** in the proof of concept module. Us
     ... });
     Error: actionId does not match /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/
     
-In the above error `actionId` refers to the `member email` which is used  INVALID here. This let us do validation of the client side only, no need to get `404` from the server. These type of error messages are more **clear** than a **404** error in **such** situations.  
+In the above error `actionId` refers to the `member email` which is used  INVALID here. This let us do validation on the client side only, no need to get `404` from the server. These type of error messages are more **clear** than a **404** error in **such** situations.  
 **Note** : I am not saying always prefer client validations and do not expect error messages from the server. Both have their different domain.
 
 Implementation
