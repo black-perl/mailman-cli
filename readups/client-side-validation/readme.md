@@ -26,5 +26,5 @@ In the above error `actionId` refers to the `member email` which is used  INVALI
 
 Implementation
 --------------
-I have implemented it here https://github.com/black-perl/mailman-cli/blob/master/lib/shared/mailman-request.js#L167 by using a path validator function. The path validation information is contained in the `options` ( **state** object ) and it's here : https://github.com/black-perl/mailman-cli/blob/master/lib/lists.js#L98 .
+I have implemented it here https://github.com/black-perl/mailman-cli/blob/master/lib/shared/mailman-request.js#L167 by using a path validator function. The path validation information is contained in the `_options` ( **state** object ) and it's here : https://github.com/black-perl/mailman-cli/blob/master/lib/lists.js#L98 .
 
