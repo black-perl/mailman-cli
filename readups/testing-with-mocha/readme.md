@@ -1,4 +1,4 @@
-I wrote a few tests for the `/lib/lists.js`. These can be found here : `https://github.com/black-perl/mailman-cli/blob/master/test/lists.tests.js'.
+I wrote a few tests for the `/lib/lists.js`. These can be found here : https://github.com/black-perl/mailman-cli/blob/master/test/lists.tests.js.
 
 Running tests:
 
