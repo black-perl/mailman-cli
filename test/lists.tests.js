@@ -127,7 +127,7 @@ describe( 'mailman.lists' ,function(){
 			expect( _supportedMethods ).to.equal( 'get|head' );
 		});
 
-		it( 'provides a method to get the owner information for a post', function() {
+		it( 'provides a method to get the owner information for a list', function() {
 			expect( lists ).to.have.property( 'moderators' );
 			expect( lists.moderators ).to.be.a( 'function' );
 			lists.listId( 'list1.domain1.org' ).moderators();
