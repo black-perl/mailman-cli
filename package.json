@@ -8,12 +8,14 @@
     "node.extend": "^1.0.10",
     "qs": "^2.3.3",
     "route-parser": "0.0.2",
-    "superagent": "^0.18.0"
+    "superagent": "^0.18.0",
+    "mocha": "^2.2.1",
+    "chai": "^2.1.2"
   },
   "description": "A client for mailman's REST API",
   "main": "cli.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha -R spec"
   },
   "repository": {
     "type": "git",
