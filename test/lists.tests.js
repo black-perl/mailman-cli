@@ -72,4 +72,77 @@ describe( 'mailman.lists' ,function(){
 
 	});
 
+	describe( 'query methods', function() {
+
+		var lists;
+
+		beforeEach(function() {
+			lists = new ListsRequest();
+			lists._options = {
+				endpoint: ''
+			};
+		});
+
+		it( 'provides a method to set the ID', function() {
+			expect( lists ).to.have.property( 'listId' );
+			expect( lists.listId ).to.be.a( 'function' );
+			lists.listId( 'list1.domain1.org' );
+			expect( lists._path ).to.have.property( 'listId' );
+			expect( lists._path.listId ).to.equal( 'list1.domain1.org' );
+		});
+
+		it( 'should update the supported methods when setting ID', function() {
+			lists.listId( 'list1.domain1.org' );
+			var _supportedMethods = lists._supportedMethods.sort().join( '|' );
+			expect( _supportedMethods ).to.equal( 'delete|get|head|post|put' );
+		});
+
+		it( 'provides a method to get the owner information for a list', function() {
+			expect( lists ).to.have.property( 'owner' );
+			expect( lists.owner ).to.be.a( 'function' );
+			lists.listId( 'list1.domain1.org' ).owner();
+			expect( lists._path ).to.have.property( 'action' );
+			expect( lists._path.action ).to.equal( 'owner' );
+		});
+
+
+		it( 'should update the supported methods when querying for owner', function() {
+			lists.listId( 'list1.domain1.org' ).owner();
+			var _supportedMethods = lists._supportedMethods.sort().join( '|' );
+			expect( _supportedMethods ).to.equal( 'get|head' );
+		});
+
+		it( 'provides a method to get the members information for a list', function() {
+			expect( lists ).to.have.property( 'members' );
+			expect( lists.members ).to.be.a( 'function' );
+			lists.listId( 'list1.domain1.org' ).members();
+			expect( lists._path ).to.have.property( 'action' );
+			expect( lists._path.action ).to.equal( 'member' );
+		});
+
+
+		it( 'should update the supported methods when querying for members', function() {
+			lists.listId( 'list1.domain1.org' ).members();
+			var _supportedMethods = lists._supportedMethods.sort().join( '|' );
+			expect( _supportedMethods ).to.equal( 'get|head' );
+		});
+
+		it( 'provides a method to get the owner information for a post', function() {
+			expect( lists ).to.have.property( 'moderators' );
+			expect( lists.moderators ).to.be.a( 'function' );
+			lists.listId( 'list1.domain1.org' ).moderators();
+			expect( lists._path ).to.have.property( 'action' );
+			expect( lists._path.action ).to.equal( 'moderator' );
+		});
+
+
+		it( 'should update the supported methods when querying for moderators', function() {
+			lists.listId( 'list1.domain1.org' ).moderators();
+			var _supportedMethods = lists._supportedMethods.sort().join( '|' );
+			expect( _supportedMethods ).to.equal( 'get|head' );
+		});
+
+
+	});
+
 });
