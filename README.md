@@ -15,6 +15,12 @@ Quick start
         > // getting the lists 
         > cli.lists().auth().get() 
         
+Testing
+--------
+
+        $ npm test
+        
+        
 Main Dependencies
 -------------
 - `Bluebird` - Promise library for js.
