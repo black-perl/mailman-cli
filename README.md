@@ -20,6 +20,11 @@ Testing
 
         $ npm test
         
+Find me@NPM
+-----------
+
+	$ npm install mailman-cli
+
         
 Main Dependencies
 -------------
