@@ -10,9 +10,9 @@ Quick start
         $ npm install
         $ node
         > var MC = require('./cli.js')
-        > // make the client object
+        // make the client object
         > var cli = new MC({'endpoint':'http://localhost:8001/3.0/'})
-        > // getting the lists 
+        // getting the lists 
         > cli.lists().auth().get() 
         
 Testing
@@ -88,7 +88,8 @@ Core Classes
 ------------
 `MC` - The base constructor for the Mailman API service.         
 `MCRequest` - `MCRequest` is the base API request object constructor.      
-`CollectionRequest` - `CollectionRequest` extends `MCRequest` with properties & methods for filtering collections.                   
+`CollectionRequest` - `CollectionRequest` extends `MCRequest` with properties & methods for filtering collections.
+**NOTE** : `MCRequest` is **RequestA** and `CollectionRequest` is **RequestB** as per the proposal.                   
 `ListsRequest` - `ListsRequest` extends `CollectionRequest` to handle the `/lists` API endpoint.                                       
 
 PS
