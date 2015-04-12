@@ -19,12 +19,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "\"git://github.com/black-perl/mailman-cli.git\""
+    "url": "git://github.com/black-perl/mailman-cli.git"
   },
   "keywords": [
     "Mailman",
     "REST"
   ],
   "author": "Ankush Sharma a.k.a black-perl",
-  "license": "BSD-2-Clause"
+  "license": "ISC",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "mocha": "~2.2.1"
+  }
 }
