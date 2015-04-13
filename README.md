@@ -100,7 +100,6 @@ Core Classes
 PS
 --
 If you try to read the code,  you may find some unnecessary things as this is aimed towards something big :smiley:
-And, sorry for not implementing a testing framework, I had spent most of my time while figuring out different things for the styling and structure of the API.
 
 
 
