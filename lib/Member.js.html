@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for lib/Member.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../prettify.css">
+    <link rel="stylesheet" href="../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header medium">
+    <h1>Code coverage report for <span class="entity">lib/Member.js</span></h1>
+    <h2>
+        Statements: <span class="metric">68.18% <small>(30 / 44)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">33.33% <small>(2 / 6)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">50% <small>(6 / 12)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">68.18% <small>(30 / 44)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">lib/</a> &#187; Member.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+/*
+    Member module
+*/
+&nbsp;
+var ApiRequest = require('./shared/ApiRequest.js');
+var Preferences = require('./Preferences.js');
+var User = require('./User.js');
+var utils = require('./utils');
+&nbsp;
+&nbsp;
+// constructor for the Member object
+function Member(options,url) {
+&nbsp;
+    this._options = options;
+&nbsp;
+    // self_link to the Member
+    this._url = url;
+&nbsp;
+    // override the supported methods by the BaseRequest
+    this._supportedMethods = ['get','delete'];
+&nbsp;
+    // set the template in the corresponding request methods only
+    this._template = '';
+&nbsp;
+    this._info = null;
+&nbsp;
+    this._preferences = null;
+&nbsp;
+    this._keys = ['email','role','list_id','self_link'];
+}
+&nbsp;
+&nbsp;
+// inheriting from the AppiRequest
+Member.prototype  = new ApiRequest();
+&nbsp;
+&nbsp;
+// ensure that the data has been GETed
+// @async
+// @public
+Member.prototype.getInfo = function(callback) {
+    // set the template string for the URL to request
+    this._template = this._url.split(this._options.endpoint)[1];
+    // check if the info has been already there or not
+    <span class="missing-if-branch" title="else path not taken" >E</span>if ( !this._info) {
+        var that = this;
+        return that.get().then(function(data) {
+                        that._info = data;
+                        that._setAccessors();
+                        return utils.promisify(that._info,callback);
+                    }).catch(<span class="fstat-no" title="function not covered" >function(e) {</span>
+<span class="cstat-no" title="statement not covered" >                        console.error(e);</span>
+                    });
+    } else {
+<span class="cstat-no" title="statement not covered" >        return utils.promisify(this._info,callback);</span>
+    }
+}
+&nbsp;
+&nbsp;
+// set the GET accerssors on the Member object
+// private
+// @sync
+Member.prototype._setAccessors = function() {
+    // setting only GET accessors
+    this._keys.forEach( (function(key) {
+        Object.defineProperty(this,key,{
+                get : function() {
+                    <span class="missing-if-branch" title="else path not taken" >E</span>if ( key in this._info )
+                        return this._info[key];
+                    else 
+<span class="cstat-no" title="statement not covered" >                        throw new Error('KeyError : key not found in the info hashmap');</span>
+                },
+&nbsp;
+                configurable : true
+            });
+        }).bind(this)
+    );
+&nbsp;
+    // GETTER for the Preferences object corresponding to the Member
+    Object.defineProperty(this,'preferences',{
+        get : <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >            if ( !this._preferences )</span>
+            {   
+<span class="cstat-no" title="statement not covered" >                var endpoint = this._url.split(this._options.endpoint)[1] + '/preferences';</span>
+<span class="cstat-no" title="statement not covered" >                this._preferences = new Preferences(this._options,endpoint);</span>
+            }
+<span class="cstat-no" title="statement not covered" >            return this._preferences;</span>
+        }
+    });
+&nbsp;
+    // GETTER for the User object corresponding to the Member
+    Object.defineProperty(this,'user',{
+        get : <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >            var endpoint = this._info.user.split(this._options.endpoint)[1];</span>
+<span class="cstat-no" title="statement not covered" >            return new User(this._options,endpoint);</span>
+        }
+    });
+}
+&nbsp;
+&nbsp;
+// public
+// @async
+// Unsubscribe a member from a mailing list
+Member.prototype.unsubscribe = <span class="fstat-no" title="function not covered" >function(callback) {</span>
+<span class="cstat-no" title="statement not covered" >    var that = this;</span>
+    //  setting the template
+<span class="cstat-no" title="statement not covered" >    that._template = that._url.split(that._options.endpoint)[1];</span>
+<span class="cstat-no" title="statement not covered" >    return that.delete().then(<span class="fstat-no" title="function not covered" >function(data) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    return utils.promisify(that,callback);</span>
+                }).catch(<span class="fstat-no" title="function not covered" >function(e) {</span>
+<span class="cstat-no" title="statement not covered" >                    console.error(e);</span>
+                });
+}
+&nbsp;
+&nbsp;
+module.exports = Member;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Jul 27 2015 20:19:19 GMT+0530 (IST)</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

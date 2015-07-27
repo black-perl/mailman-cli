@@ -1,0 +1,912 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for lib/shared/BaseRequest.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">lib/shared/BaseRequest.js</span></h1>
+    <h2>
+        Statements: <span class="metric">86.73% <small>(98 / 113)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">75% <small>(45 / 60)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">95.24% <small>(20 / 21)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">86.73% <small>(98 / 113)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">lib/shared/</a> &#187; BaseRequest.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">29</span>
+<span class="cline-any cline-yes">29</span>
+<span class="cline-any cline-yes">29</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">66</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">66</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">66</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">66</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">60</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">60</span>
+<span class="cline-any cline-yes">60</span>
+<span class="cline-any cline-yes">60</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">60</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">54</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">54</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">48</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">29</span>
+<span class="cline-any cline-yes">61</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">29</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">65</span>
+<span class="cline-any cline-yes">65</span>
+<span class="cline-any cline-yes">65</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">65</span>
+<span class="cline-any cline-yes">39</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">65</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">29</span>
+<span class="cline-any cline-yes">64</span>
+<span class="cline-any cline-yes">38</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">64</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">63</span>
+<span class="cline-any cline-yes">63</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">29</span>
+<span class="cline-any cline-yes">63</span>
+<span class="cline-any cline-yes">63</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">63</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">29</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">63</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">63</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">63</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">29</span>
+<span class="cline-any cline-yes">31</span>
+<span class="cline-any cline-yes">31</span>
+<span class="cline-any cline-yes">31</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">30</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">29</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">29</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">29</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">29</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">29</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">29</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+/**
+* @module BaseRequest
+**/
+&nbsp;
+var Promise = require('bluebird');
+var agent = require('superagent');
+var Route = require('route-parser');
+&nbsp;
+&nbsp;
+/**
+ * BaseRequest is the base API request object constructor
+ *
+ * @class BaseRequest
+ * @constructor
+ * @param {Object} options - A hash of options for the BaseRequest instance
+ * @param {String} options.endpoint - The endpoint URI to request
+ * @param {String} [options.username] - A username for authenticating API requests
+ * @param {String} [options.password] - A password for authenticating API requests
+ */
+ function BaseRequest(options) {
+    this._options = options || {};
+    // hash of key,val pairs to get the URL to request by expanding the this._template
+    this._path = {};
+    // the template that the different URL endpoints for a given class follows
+    this._template = '';
+    // the BaseRequest should support all the possible methods
+    this._supportedMethods = [ 'head', 'get', 'put', 'post', 'delete', 'patch' ];
+&nbsp;
+ }
+&nbsp;
+/** 
+* Utility functions that are used by invokeAndPromisify
+**/
+&nbsp;
+// function that does not perform any operation
+ function noop() { }
+&nbsp;
+&nbsp;
+ // function that simply returns the input value to it
+ function identity(input) {
+    return input;
+ }
+&nbsp;
+&nbsp;
+// check if the "func" is a function or 
+ function ensureCallback(func) {
+    return ( typeof func === 'function' ) ? func : noop;
+}
+&nbsp;
+&nbsp;
+// the API should offer support for both callbacks and promises
+// so promisify and invoke the request 
+/*
+* @param {Function} callback - The promise callback
+* @param {Object} request - Request object to invoke
+* @param {Function} transform - Transform operation to be carried on the response
+*/
+function invokeandPromisify(request, callback, transform) {
+    callback = ensureCallback( callback );
+    transform = transform || <span class="branch-1 cbranch-no" title="branch not covered" >identity;</span>
+    return new Promise(function(resolve,reject) {
+    // Invoke the request
+    request.end(function(err,result) {
+&nbsp;
+        // Return the results as a promise
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (err || result.error) {
+<span class="cstat-no" title="statement not covered" >            reject(err || result.error);</span>
+        } else {
+            resolve(result);
+        }
+    });
+    }).then(transform).nodeify(callback);
+}
+&nbsp;
+&nbsp;
+/*
+** Some transform functions
+*/
+&nbsp;
+// returns the body of the result from the agent call
+function getBody(result) {
+    return result.body;
+}
+&nbsp;
+// returns the headers of the result from the agent call
+<span class="fstat-no" title="function not covered" >function getHeaders(result) {</span>
+<span class="cstat-no" title="statement not covered" >    return result.headers;</span>
+}
+&nbsp;
+&nbsp;
+/*
+Prototype methods
+=================
+*/
+&nbsp;
+/**
+ * Verify that the current request object supports a given HTTP verb
+ *
+ * @private
+ *
+ * @method _checkMethodSupport
+ * @param {String} method An HTTP method to check ('get', 'post', etc)
+ * @return true iff the method is within this._supportedMethods
+ */
+BaseRequest.prototype._checkMethodSupport = function(method) {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if ( this._supportedMethods.indexOf(method) == -1 ) {
+<span class="cstat-no" title="statement not covered" >        throw new Error(</span>
+            'Unsupported method, Supported methods are:'+
+            this._supportedMethods.join(',')
+        );
+    }
+}
+&nbsp;
+&nbsp;
+// Check presence of authentication parameters
+BaseRequest.prototype._checkAuthParameters = function() {
+    // by default assuming the authentication is not requires
+    this._options.forceAuth = false;
+    var username = this._options.username || null;
+    var password = this._options.password || null;
+    // force the authentication is the username and password is supplied
+    if ( typeof username === 'string' &amp;&amp; typeof password === 'string' ) {
+        this._options.forceAuth = true;
+    }
+    return this._options.forceAuth;
+}
+&nbsp;
+&nbsp;
+// handles authentication automatically by taking a request object as parameter
+BaseRequest.prototype._auth  = function(request) {
+    if ( this._checkAuthParameters() ) {
+        request.auth(this._options.username,this._options.password);
+    }
+    return request;
+}
+&nbsp;
+&nbsp;
+/* TODO : add validators */
+&nbsp;
+// check if anything is not validating before rendering the final URI
+function validatePath(pathObj,validatorObj) {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (!validatorObj) {
+        return pathObj;
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    for(var prop in pathObj) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if(!pathObj.hasOwnProperty(prop)) {</span>
+<span class="cstat-no" title="statement not covered" >            continue;</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (!validatorObj[prop]) {</span>
+            // no validator, no issue
+<span class="cstat-no" title="statement not covered" >            continue;</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if ( !(pathObj[prop]+'').match(validatorObj[prop]) ) {</span>
+<span class="cstat-no" title="statement not covered" >            throw new Error (</span>
+                prop + 'does not match' + validatorObj[prop]
+            );
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return pathObj;</span>
+    }
+}
+&nbsp;
+&nbsp;
+// render the path to request
+BaseRequest.prototype._renderPath = function() {
+    var pathTemplate = new Route(this._template);
+    var validatedPath = validatePath(this._path,this._pathValidators);
+&nbsp;
+    return pathTemplate.reverse(validatedPath) || '';
+}
+&nbsp;
+&nbsp;
+// render final URI to request by checking for the query params
+BaseRequest.prototype._renderURI = function() {
+    // Render the path to a string
+    var path = this._renderPath();
+&nbsp;
+    // If the current request supports query params, render them to a query string
+    // =&gt; set this._renderQuery to true when query params are added
+    var queryStr = this._queryParams ? (<span class="branch-0 cbranch-no" title="branch not covered" >'?' + this._renderQuery())</span> : '';
+&nbsp;
+    return this._options.endpoint + path + queryStr;
+};
+&nbsp;
+/*
+ HTTP methods
+ ============
+ */
+&nbsp;
+&nbsp;
+BaseRequest.prototype.get = function(callback,transform) {
+    var url = this._renderURI();
+    this._checkMethodSupport('get');
+    var request = this._auth(agent.get(url));
+&nbsp;
+    if ( transform === 'identity' )
+        return invokeandPromisify(request,callback,identity);
+    else
+        return invokeandPromisify(request,callback,getBody);
+}
+&nbsp;
+&nbsp;
+BaseRequest.prototype.post = function(data,callback,transform) {
+    var request;
+    var url = this._renderURI();
+    this._checkMethodSupport('post');
+&nbsp;
+    if ( typeof data === 'undefined' || JSON.stringify(data) === '{}' )  { 
+        data = {};
+        request = this._auth(agent.post(url)).send(data); 
+    } else {
+        request = this._auth(agent.post(url)).send(data).type('form');
+    }
+&nbsp;
+    if ( transform === 'identity' )
+        return invokeandPromisify(request,callback,identity);
+    else
+        return invokeandPromisify(request,callback,getBody);
+}
+&nbsp;
+&nbsp;
+BaseRequest.prototype.put = function(data,callback,transform) {
+    var request;
+    var url = this._renderURI();
+    this._checkMethodSupport('put');
+&nbsp;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if ( typeof data === 'undefined' || JSON.stringify(data) === '{}' )  { 
+<span class="cstat-no" title="statement not covered" >        data = {};</span>
+<span class="cstat-no" title="statement not covered" >        request = this._auth(agent.put(url)).send(data); </span>
+    } else {
+        request = this._auth(agent.put(url)).send(data).type('form');
+    }
+&nbsp;
+    if ( transform === 'identity' )
+        return invokeandPromisify(request,callback,identity);
+    else
+        return invokeandPromisify(request,callback,getBody);
+}
+&nbsp;
+&nbsp;
+BaseRequest.prototype.patch = function(data,callback,transform) {
+    var request;
+    var url = this._renderURI();
+    this._checkMethodSupport('patch');
+&nbsp;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if ( typeof data === 'undefined' || JSON.stringify(data) === '{}' )  { 
+<span class="cstat-no" title="statement not covered" >        data = {};</span>
+<span class="cstat-no" title="statement not covered" >        request = this._auth(agent.patch(url)).send(data); </span>
+    } else {
+        request = this._auth(agent.patch(url)).send(data).type('form');
+    }
+&nbsp;
+    if ( transform === 'identity' )
+        return invokeandPromisify(request,callback,identity);
+    else
+        return invokeandPromisify(request,callback,getBody);
+}
+&nbsp;
+&nbsp;
+BaseRequest.prototype.delete = function(callback,transform) {
+    var url = this._renderURI();
+    this._checkMethodSupport('delete');
+    var request = this._auth(agent.del(url));
+&nbsp;
+    if ( transform === 'identity' )
+        return invokeandPromisify(request,callback,identity);
+    else
+        return invokeandPromisify(request,callback,getBody);
+}
+&nbsp;
+&nbsp;
+BaseRequest.prototype.head = function(callback,transform) {
+    var url = this._renderURI();
+    this._checkMethodSupport('head');
+    var request = this._auth(agent.head(url));
+&nbsp;
+    if ( transform === 'identity' )
+        return invokeandPromisify(request,callback,identity);
+    else
+        return invokeandPromisify(request,callback,getBody);
+}
+&nbsp;
+&nbsp;
+module.exports = BaseRequest;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Jul 27 2015 20:19:19 GMT+0530 (IST)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

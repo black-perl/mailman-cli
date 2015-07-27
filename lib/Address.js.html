@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for lib/Address.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../prettify.css">
+    <link rel="stylesheet" href="../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">lib/Address.js</span></h1>
+    <h2>
+        Statements: <span class="metric">88.89% <small>(48 / 54)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">50% <small>(4 / 8)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">78.57% <small>(11 / 14)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">88.89% <small>(48 / 54)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">lib/</a> &#187; Address.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">35</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">35</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">35</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">35</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">35</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">35</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">35</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">35</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">35</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">36</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+/*
+*   Address module
+*/
+&nbsp;
+var ApiRequest = require('./shared/ApiRequest.js');
+var Preferences = require('./Preferences.js');
+var utils = require('./utils');
+&nbsp;
+&nbsp;
+// Address class for a particular email address
+function Address(options,address) {
+&nbsp;
+    this._options = options || <span class="branch-1 cbranch-no" title="branch not covered" >{};</span>
+&nbsp;
+    this._supportedMethods = ['get','post'];
+&nbsp;
+    this.email = address.email;
+&nbsp;
+    this._url = address.self_link;
+    
+    // each individual method will use it own template seperately
+    this._template = '';
+&nbsp;
+    this._path = {};
+&nbsp;
+    this._preferences = null;
+&nbsp;
+    this._info = null;
+&nbsp;
+    this._keys = [];
+&nbsp;
+}
+&nbsp;
+&nbsp;
+Address.prototype  = new ApiRequest();
+&nbsp;
+&nbsp;
+// @async 
+// @public
+Address.prototype.getInfo = function(callback) {
+    // setting the template
+    this._template = this._url.split(this._options.endpoint)[1];
+    <span class="missing-if-branch" title="else path not taken" >E</span>if ( !this._info ) {
+        var that = this;
+        return that.get().then(function(data) {
+                        that._info = data;
+                        that._keys = Object.keys(that._info);
+                        that._setAccessors();
+                        return utils.promisify(that,callback);
+                    });
+    }
+    else {
+<span class="cstat-no" title="statement not covered" >        return utils.promisify(this,callback);</span>
+    }
+}
+&nbsp;
+&nbsp;
+// define getters on the existing address object
+// @private
+Address.prototype._setAccessors = function() {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if ( this._keys.length != 0 ) {
+        this._keys.forEach( (function(key) {
+&nbsp;
+            Object.defineProperty(this,key,{
+&nbsp;
+                get : function() {
+                    <span class="missing-if-branch" title="else path not taken" >E</span>if ( key in this._info )
+                        return this._info[key];
+                    else 
+<span class="cstat-no" title="statement not covered" >                        throw new Error('KeyError : key not found in the address hashmap');</span>
+                },
+&nbsp;
+                configurable : true
+            });
+&nbsp;
+        }).bind(this)
+&nbsp;
+        );
+&nbsp;
+        // getter for Preferences object associated to the address
+        Object.defineProperty(this,'preferences',{
+            get : function() {
+                var endpoint = '/addresses/' + this.email + '/preferences';
+                return new Preferences(this._options,endpoint);
+            },
+            configurable : true
+        });
+    } 
+    // if data is not fetched at all
+    else {
+<span class="cstat-no" title="statement not covered" >        throw new Error('getInfo() should be called first');</span>
+    }
+}
+&nbsp;
+&nbsp;
+// Verify the address
+// @async
+// @public
+Address.prototype.verify = function(callback) {
+    var that = this;
+    that._template = '/addresses/(:email)/verify';
+    that._path.email = that.email;
+    return that.post().then(function(data) {
+                    that._info = null;
+                    return that.getInfo(callback);
+                }).catch(<span class="fstat-no" title="function not covered" >function(e) {</span>
+<span class="cstat-no" title="statement not covered" >                    console.error(e);</span>
+                });
+}
+&nbsp;
+&nbsp;
+// unverify the address
+// @async
+// @public
+Address.prototype.unverify = function(callback) {
+    var that = this;
+    that._template = '/addresses/(:email)/unverify';
+    that._path.email = that.email;
+    return that.post().then(function(data) {
+                    that._info = null;
+                    return that.getInfo(callback);
+                }).catch(<span class="fstat-no" title="function not covered" >function(e) {</span>
+<span class="cstat-no" title="statement not covered" >                    console.error(e);</span>
+                });
+}
+&nbsp;
+&nbsp;
+// string representation of the address object
+Address.prototype.toString = <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >    return this.email;</span>
+}
+&nbsp;
+&nbsp;
+module.exports = Address;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Jul 27 2015 20:19:19 GMT+0530 (IST)</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

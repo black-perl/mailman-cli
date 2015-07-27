@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for lib/Addresses.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../prettify.css">
+    <link rel="stylesheet" href="../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">lib/Addresses.js</span></h1>
+    <h2>
+        Statements: <span class="metric">95.45% <small>(42 / 44)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">78.57% <small>(11 / 14)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">90% <small>(9 / 10)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">95.35% <small>(41 / 43)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">lib/</a> &#187; Addresses.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">19</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+/*
+*   Addresses module
+*/
+&nbsp;
+var ApiRequest = require('./shared/ApiRequest.js');
+var Address = require('./Address.js');
+var utils = require('./utils');
+&nbsp;
+&nbsp;
+// Addresses class 
+// for a given user
+function Addresses(options,template,userId) {
+&nbsp;
+    this._options = options || <span class="branch-1 cbranch-no" title="branch not covered" >{};</span>
+&nbsp;
+    // override supported methods by BaseRequest
+    this._supportedMethods = ['get'];
+&nbsp;
+    this._addresses = [];
+&nbsp;
+    this._addressItems = []; // Address objects
+&nbsp;
+    this._userId = userId;
+&nbsp;
+    // individual methods will use this template
+    this._template = template || '/users/(:user)/addresses';
+&nbsp;
+    this._path = { user : this._userId };
+}
+&nbsp;
+&nbsp;
+Addresses.prototype = new ApiRequest();
+&nbsp;
+&nbsp;
+// @private
+// @async
+// find all the associated addresses
+Addresses.prototype.getAddresses = function(callback) {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if ( this._addresses.length == 0 )
+    {
+        var that = this;
+        return that.get().then(function(content) {
+                        var items = [];
+                        <span class="missing-if-branch" title="else path not taken" >E</span>if ( 'entries' in content ) {
+                            that._addresses = content['entries'];
+                            that.length = that._addresses.length;
+                        }
+                        that._addresses.forEach(function(addrEntry) {
+                            items.push(new Address(that._options,addrEntry));
+                        });
+                        that._addressItems = items;
+                        return utils.promisify(that._addressItems,callback);
+                    }).catch(<span class="fstat-no" title="function not covered" >function(e) {</span>
+                        // this should be passed to the node style callback when there is error and callback
+<span class="cstat-no" title="statement not covered" >                        console.error(e);</span>
+                    });
+    } 
+    else {
+<span class="cstat-no" title="statement not covered" >        return utils.promisify(this._addressItems,callback);</span>
+    }
+}
+&nbsp;
+&nbsp;
+// iterator over each of the individual Address object
+// @async
+// @public
+Addresses.prototype.each = function(callback) {
+    var that = this;
+    that.getAddresses().then(function() {
+        for ( var index = 0 ; index &lt; that.length ; index++ ) {
+            callback(new Address(that._options,that._addresses[index]));
+        }
+    });
+}
+&nbsp;
+&nbsp;
+// filter Address object based upon email addresses
+// @async
+// @public
+Addresses.prototype.filterByEmail = function(email,callback) {
+    if ( typeof email === 'undefined' )     { throw new Error('email not provided'); }
+    var filterCallback = function(add) {
+        if ( add.email === email )
+            return true;
+    } 
+    var that = this;
+    return that.getAddresses().then(function() {
+                   var filteredArray = that._addressItems.filter(filterCallback);
+                   if ( filteredArray.length != 0 )
+                       return utils.promisify(filteredArray[0],callback);
+                   else 
+                       return utils.promisify(null,callback);
+               });
+}
+&nbsp;
+&nbsp;
+module.exports = Addresses;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Jul 27 2015 20:19:19 GMT+0530 (IST)</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
