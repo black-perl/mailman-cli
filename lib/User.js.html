@@ -15,10 +15,10 @@
 <div class="header high">
     <h1>Code coverage report for <span class="entity">lib/User.js</span></h1>
     <h2>
-        Statements: <span class="metric">89.29% <small>(100 / 112)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Statements: <span class="metric">89.38% <small>(101 / 113)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         Branches: <span class="metric">71.43% <small>(20 / 28)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         Functions: <span class="metric">83.33% <small>(30 / 36)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
-        Lines: <span class="metric">89.29% <small>(100 / 112)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">89.38% <small>(101 / 113)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
     <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">lib/</a> &#187; User.js</div>
@@ -308,7 +308,11 @@
 281
 282
 283
-284</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+284
+285
+286
+287
+288</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -319,39 +323,45 @@
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-yes">17</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-yes">17</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-yes">17</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-yes">17</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-yes">17</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-yes">17</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-yes">17</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-yes">17</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-yes">17</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-yes">17</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-yes">17</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-yes">17</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
@@ -589,9 +599,7 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
 &nbsp;
 /*
     User Module
@@ -600,7 +608,6 @@
 var ApiRequest = require('./shared/ApiRequest.js');
 var Addresses = require('./Addresses.js');
 var Preferences = require('./Preferences.js');
-var Member = require('./Member.js');
 var utils = require('./utils');
 var lodash = require('lodash');
 &nbsp;
@@ -617,6 +624,8 @@ function User(options,url)
     this._url = url;
 &nbsp;
     this._path = {};
+&nbsp;
+    this._rootTemplate = this._url.split(this._options.endpoint)[1];
 &nbsp;
     // set the template in the corresponding request methods only
     this._template = '';
@@ -637,6 +646,11 @@ function User(options,url)
 }
 &nbsp;
 &nbsp;
+// resolve circular dependency
+module.exports = User;
+var Member = require('./Member.js');
+&nbsp;
+&nbsp;
 User.prototype = new ApiRequest();
 &nbsp;
 &nbsp;
@@ -645,7 +659,7 @@ User.prototype = new ApiRequest();
 // @public
 User.prototype.getInfo = function(callback) {
     // setting the template
-    this._template = this._url.split(this._options.endpoint)[1];
+    this._template = this._rootTemplate;
     // checking for existence of _info
     <span class="missing-if-branch" title="else path not taken" >E</span>if ( !this._info ) {
         var that = this;
@@ -736,7 +750,7 @@ User.prototype._setAccessors = function() {
         get : function() {
             <span class="missing-if-branch" title="else path not taken" >E</span>if ( !this._preferences )
             {
-                var path = this._url + '/preferences';
+                var path = this._rootTemplate + '/preferences';
                 this._preferences = new Preferences(this._options,path);
             }
             return this._preferences;
@@ -750,7 +764,7 @@ User.prototype._setAccessors = function() {
 // @async
 User.prototype.addAddress = function(email,callback) {
     this._template = '(:selfUrl)/addresses';
-    this._path.selfUrl = this._url.split(this._options.endpoint)[1];
+    this._path.selfUrl = this._rootTemplate;
         // no need to update the _info as it does not contain addresses info
         var that = this;
         return that.post({email : email}).then(function(data) {
@@ -850,7 +864,7 @@ User.prototype.save = function(callback) {
     // check for the existence of cleartext_password
     (that._cleartext_password) ? (data['cleartext_password'] = that._cleartext_password) : (<span class="branch-1 cbranch-no" title="branch not covered" >that._cleartext_password = null)</span>;
     // set the template
-    that._template = that._url.split(that._options.endpoint)[1];
+    that._template = that._rootTemplate;
     return that.patch(data).then(function(data) {
                     that._info = null;
                     return utils.promisify(that,callback)
@@ -865,21 +879,19 @@ User.prototype.save = function(callback) {
 // @async
 User.prototype.deleteUser = function(callback) {
     var that = this;
-    that._template = that._url.split(that._options.endpoint)[1];
+    that._template = that._rootTemplate;
     return that.delete().then(function(data) {
                     return utils.promisify(that,callback)
                 }).catch(<span class="fstat-no" title="function not covered" >function(e) {</span>
 <span class="cstat-no" title="statement not covered" >                    console.error(e);</span>
                 });             
 }
-&nbsp;
-&nbsp;
-module.exports = User;</pre></td></tr>
+&nbsp;</pre></td></tr>
 </table></pre>
 
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Jul 27 2015 20:19:19 GMT+0530 (IST)</div>
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Jul 28 2015 20:44:29 GMT+0530 (IST)</div>
 </div>
 <script src="../prettify.js"></script>
 <script>
