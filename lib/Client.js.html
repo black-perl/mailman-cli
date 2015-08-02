@@ -1,0 +1,1044 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for lib/Client.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../prettify.css">
+    <link rel="stylesheet" href="../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">lib/Client.js</span></h1>
+    <h2>
+        Statements: <span class="metric">84.71% <small>(144 / 170)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">59.52% <small>(25 / 42)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">75.44% <small>(43 / 57)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">90.51% <small>(143 / 158)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">lib/</a> &#187; Client.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">21</span>
+<span class="cline-any cline-yes">21</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">17</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">14</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+/*
+    Client module
+*/
+&nbsp;
+var ApiRequest = require('./shared/ApiRequest.js');
+var Preferences = require('./Preferences.js');
+var User = require('./User.js');
+var Domain = require('./Domain.js');
+var Address = require('./Address.js');
+var List = require('./List.js');
+var Member = require('./Member.js');
+var Page = require('./Page.js');
+var utils = require('./utils');
+&nbsp;
+&nbsp;
+// Client class constructor
+function Client(options) {
+&nbsp;
+    this._options = options;
+&nbsp;
+    this._setAccessors();
+}
+&nbsp;
+&nbsp;
+Client.prototype = new ApiRequest();
+&nbsp;
+&nbsp;
+// @async
+// @public
+// GET the system versions information
+Client.prototype.getVersions = function(callback) {
+    this._template = '/system/versions';
+    return this.get().then(function(resp) {
+                    return utils.promisify(resp,callback);
+                }).catch(<span class="fstat-no" title="function not covered" >function(e) {</span>
+<span class="cstat-no" title="statement not covered" >                    console.error(e);</span>
+                });
+}
+&nbsp;
+&nbsp;
+// @sync
+// @private
+// Set the accessors on the Client object
+Client.prototype._setAccessors = function() {
+    var that = this;
+    Object.defineProperty(this,'preferences',{
+        get : function() {
+            return new Preferences(that._options,'/system/preferences');
+        }
+    });
+}
+&nbsp;
+&nbsp;
+// @async
+// @public
+// Returns the List object corresponding to each of the list
+Client.prototype.getLists = function(callback) {
+    var that = this;
+    that._template = '/lists';
+    return that.get().then(function(resp) {
+                    var items = [];
+                    <span class="missing-if-branch" title="else path not taken" >E</span>if ( 'entries' in resp ) {
+                        resp.entries.forEach(function(entry) {
+                            items.push(new List(that._options,entry.self_link));
+                        });
+                    }
+                    return utils.promisify(items,callback);
+                }).catch(<span class="fstat-no" title="function not covered" >function(e) {</span>
+<span class="cstat-no" title="statement not covered" >                    console.error(e);</span>
+                });
+}
+&nbsp;
+&nbsp;
+// @sync
+// @public
+// Returns a paginated array of List objects with their number limited by count
+Client.prototype.listPage = function(count,page) {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if ( typeof count === 'undefined' ) { <span class="cstat-no" title="statement not covered" >count = 50 }</span>;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if ( typeof page === 'undefined' ) { <span class="cstat-no" title="statement not covered" >count = 1 }</span>;
+    return new Page(this._options,'/lists',List,count,page);
+}
+&nbsp;
+&nbsp;
+// @async
+// @public
+// Returns all the Domains object
+Client.prototype.getDomains = function(callback) {
+    var that = this;
+    that._template = '/domains';
+    return that.get().then(function(resp) {
+                    var items = [];
+                    <span class="missing-if-branch" title="else path not taken" >E</span>if ( 'entries' in resp ) {
+                        resp.entries.forEach(function(entry) {
+                            items.push(new Domain(that._options,entry.self_link));
+                        })
+                        items.sort(function(x,y) {
+                            return (x &gt; y) - (x &lt; y);
+                        });
+                    }
+                    return utils.promisify(items,callback);
+                }).catch(<span class="fstat-no" title="function not covered" >function(e) {</span>
+<span class="cstat-no" title="statement not covered" >                    console.error(e);</span>
+                });
+}
+&nbsp;
+&nbsp;
+// @async
+// @public
+// Get the Members
+Client.prototype.getMembers = function(callback) {
+    var that = this;
+    that._template = '/members';
+    return that.get().then(function(resp) {
+                    var items = [];
+                    <span class="missing-if-branch" title="else path not taken" >E</span>if ( 'entries' in resp ) {
+                        resp.entries.forEach(function(entry) {
+                            items.push(new Member(that._options,entry.self_link));
+                        });
+                    }
+                    return utils.promisify(items,callback);
+                }).catch(<span class="fstat-no" title="function not covered" >function(e) {</span>
+<span class="cstat-no" title="statement not covered" >                    console.error(e);</span>
+                });
+}
+&nbsp;
+&nbsp;
+// @sync
+// @public
+// Returns a paginated array of Member objects with their number limited by count
+Client.prototype.memberPage = function(count,page) {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if ( typeof count === 'undefined' )     { <span class="cstat-no" title="statement not covered" >count = 50 }</span>;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if ( typeof page === 'undefined' )      { <span class="cstat-no" title="statement not covered" >page = 1 }</span>;
+    return new Page(this._options,'/members',Member,count,page);
+}   
+&nbsp;
+&nbsp;
+// @async
+// @public
+// Returns an array of User objects
+Client.prototype.getUsers = function(callback) {
+    var that = this;
+    that._template = '/users';
+    return that.get().then(function(resp) {
+                    var items = [];
+                    <span class="missing-if-branch" title="else path not taken" >E</span>if ( 'entries' in resp ) {
+                        resp.entries.forEach(function(entry) {
+                            items.push(new User(that._options,entry.self_link));    
+                        });
+                    }
+                    items.sort(function(x,y) {
+                        return (x &gt; y) - (x &lt; y);
+                    });
+                    return utils.promisify(items,callback);
+                }).catch(<span class="fstat-no" title="function not covered" >function(e) {</span>
+<span class="cstat-no" title="statement not covered" >                    console.error(e);</span>
+                });
+}
+&nbsp;
+&nbsp;
+// @sync
+// @public
+// Returns a paginated array of User objects with their number limited by count
+Client.prototype.userPage = function(count,page) {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if ( typeof count === 'undefined' )     { <span class="cstat-no" title="statement not covered" >count = 50 }</span>;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if ( typeof page === 'undefined' )      { <span class="cstat-no" title="statement not covered" >page = 1 }</span>;
+    return new Page(this._options,'/users',User,count,page);
+}
+&nbsp;
+&nbsp;
+// @async
+// @public
+// creates a Domain
+Client.prototype.createDomain = function(mailHost,baseURL,description,owner,callback) {
+    var payload = { mail_host : mailHost };
+&nbsp;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if ( typeof baseURL === 'undefined' )       { <span class="cstat-no" title="statement not covered" >baseURL = null; </span>} 
+    else    { payload.base_url = baseURL; }
+&nbsp;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if ( typeof description === 'undefined' )       { <span class="cstat-no" title="statement not covered" >description = null; </span>}
+    else    { payload.description = description; }
+&nbsp;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if ( typeof owner === 'undefined' )     { <span class="cstat-no" title="statement not covered" >owner = null; </span>}
+    else    { payload.owner = owner; }
+&nbsp;
+    var that = this;
+    that._template = '/domains';
+    return that.post(payload,null,'identity').then(function(resp) {
+                    var domainObj = new Domain(that._options,resp.headers.location);
+                    return utils.promisify(domainObj,callback);
+                }).catch(<span class="fstat-no" title="function not covered" >function(e) {</span>
+<span class="cstat-no" title="statement not covered" >                    console.error(e);</span>
+                });
+}
+&nbsp;
+&nbsp;
+// @async
+// @public
+// Deletes a domain
+Client.prototype.deleteDomain = function(mailHost,callback) {
+    var that = this;
+    that._template = '/domains/' + mailHost;
+    return that.delete().then(function() {
+                    return utils.promisify(that,callback);
+                }).catch(<span class="fstat-no" title="function not covered" >function(e) {</span>
+<span class="cstat-no" title="statement not covered" >                    console.error(e);</span>
+                });
+}
+&nbsp;
+// @async
+// @public
+// Get a Domain by its mail_host or its web_host
+Client.prototype.getDomain = function(mailHost,webHost,callback) {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if ( typeof mailHost === 'undefined' )   { <span class="cstat-no" title="statement not covered" >mailHost = null }</span>;
+    if ( typeof webHost === 'undefined' )   { webHost = null };
+&nbsp;
+    var that = this;
+    if ( mailHost ) {
+        that._template = '/domains/' + mailHost;
+        return that.get().then(function(resp) {
+                        return new Domain(that._options,resp.self_link);
+                    }).then(function(domain) {
+                        return domain.getInfo();
+                    }).catch(<span class="fstat-no" title="function not covered" >function(e) {</span>
+<span class="cstat-no" title="statement not covered" >                        console.error(e);</span>
+                    });
+    }
+    else <span class="missing-if-branch" title="else path not taken" >E</span>if ( webHost ) {
+        return new utils.Promise(function(resolve,reject) {
+            that.getDomains().then(function(domains) {
+                        var numDomains = domains.length;
+                        var loopcount = 0;
+                        domains.forEach(function(domain) {
+                            domain.getInfo().then(function() {
+                                loopcount++;
+                                if ( domain.base_url === webHost ) {
+                                    resolve(domain);
+                                }
+                                else <span class="missing-if-branch" title="if path not taken" >I</span>if ( loopcount === numDomains ) {
+<span class="cstat-no" title="statement not covered" >                                    resolve(null);</span>
+                                }
+                            }); // getInfo
+                        }); // forEach
+                    }).catch(<span class="fstat-no" title="function not covered" >function(e) {</span>
+<span class="cstat-no" title="statement not covered" >                        console.error(e);</span>
+                    }); // getDomains
+        }).nodeify(callback || utils.noop);
+    }
+}
+&nbsp;
+&nbsp;
+// @async
+// @public
+// Create a User
+Client.prototype.createUser = function(email,password,displayName,callback) {
+    var that = this;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if ( typeof displayName === 'undefined' )       { <span class="cstat-no" title="statement not covered" >displayName = '' }</span>;
+    that._template = '/users';
+    var payload = {
+        email : email,
+        password : password,
+        display_name : displayName
+    };
+    return that.post(payload,null,'identity').then(function(resp) {
+                    var userObj = new User(that._options,resp.headers.location);
+                    return utils.promisify(userObj,callback);
+                }).catch(<span class="fstat-no" title="function not covered" >function(e) {</span>
+<span class="cstat-no" title="statement not covered" >                    console.error(e);</span>
+                });
+}   
+&nbsp;
+&nbsp;
+// @async
+// @public
+// Get a User by email address
+Client.prototype.getUser = function(email,callback) {
+    var that = this;
+    that._template = '/users/' + email;
+    return that.get().then(function(resp) {
+                    var userObj = new User(that._options,resp.self_link);
+                    return utils.promisify(userObj,callback);
+                }).catch(<span class="fstat-no" title="function not covered" >function(e) {</span>
+<span class="cstat-no" title="statement not covered" >                    console.error(e);</span>
+                });
+}
+&nbsp;
+&nbsp;
+// @async
+// @public
+// Get the Address object corresponding to a given Address
+Client.prototype.getAddress = function(email,callback) {
+    var that = this;
+    that._template = '/addresses/' + email;
+    return that.get().then(function(resp) {
+                    var addressObj = new Address(that._options,resp);
+                    return utils.promisify(addressObj,callback);
+                }).catch(<span class="fstat-no" title="function not covered" >function(e) {</span>
+<span class="cstat-no" title="statement not covered" >                    console.error(e);</span>
+                });
+}
+&nbsp;
+&nbsp;
+// @async
+// @public
+// Get a List object by its fqdn_listname
+Client.prototype.getList = function(fqdnListname,callback) {
+    var that = this;
+    that._template = '/lists/' + fqdnListname;
+    return that.get().then(function(resp) {
+                    var listObj = new List(that._options,resp.self_link);
+                    return utils.promisify(listObj,callback);
+                }).catch(<span class="fstat-no" title="function not covered" >function(e) {</span>
+<span class="cstat-no" title="statement not covered" >                    console.error(e);</span>
+                });
+}
+&nbsp;
+&nbsp;
+// @async
+// @public
+// Delete a List object by its fqdnListname
+Client.prototype.deleteList = function(fqdnListname,callback) {
+    var that = this;
+    that._template = '/lists/' + fqdnListname;
+    return that.delete().then(function(resp) {
+                    return utils.promisify(that,callback);
+                }).catch(<span class="fstat-no" title="function not covered" >function(e) {</span>
+<span class="cstat-no" title="statement not covered" >                    console.error(e);</span>
+                });
+}
+&nbsp;
+&nbsp;
+module.exports = Client;
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Aug 02 2015 13:58:18 GMT+0530 (IST)</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
